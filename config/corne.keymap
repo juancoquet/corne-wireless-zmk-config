@@ -22,10 +22,15 @@
         superglide: superglide {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp SPACE>, <&macro_wait_time 0>, <&kp A>;
+            bindings =
+                <&macro_press>,
+                <&kp SPACE>,
+                <&macro_wait_time 10>,
+                <&kp A>,
+                <&macro_release>;
 
             label = "SUPERGLIDE";
-            wait-ms = <1>;
+            wait-ms = <10>;
         };
     };
 
