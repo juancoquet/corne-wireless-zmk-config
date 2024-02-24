@@ -26,8 +26,11 @@
                 <&macro_press>,
                 <&kp SPACE>,
                 <&macro_wait_time 10>,
+                <&macro_tap>,
                 <&kp A>,
-                <&macro_release>;
+                <&macro_release>,
+                <&kp SPACE>,
+                <&macro_wait_time 1>;
 
             label = "SUPERGLIDE";
             wait-ms = <10>;
