@@ -18,6 +18,16 @@
         };
     };
 
+    macros {
+        superglide: superglide {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &kp A>;
+            label = "SUPERGLIDE";
+            wait-ms = <10>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -79,17 +89,17 @@
             bindings = <
 &kp TAB           &kp Q  &kp W  &kp E         &kp R  &kp T        &kp F7  &kp F8  &kp F9  &kp F10  &kp F11   &kp F12
 &kp LEFT_CONTROL  &kp A  &kp S  &kp D         &kp F  &kp G        &kp H   &kp J   &kp K   &kp L    &kp SEMI  &kp APOS
-&kp LSHFT         &kp Z  &kp X  &kp C         &kp V  &kp B        &kp F1  &kp F2  &kp F3  &kp F4   &kp F5    &kp F6
+&superglide       &kp Z  &kp X  &kp C         &kp V  &kp B        &kp F1  &kp F2  &kp F3  &kp F4   &kp F5    &kp F6
                                 &kp LEFT_ALT  &mo 5  &kp SPACE    &none   &none   &none
             >;
         };
 
         layer_5 {
             bindings = <
-&kp ESC  &kp P         &kp O         &kp I         &kp U         &kp Y           &none  &none  &none  &none  &none  &none
-&kp RET  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5          &none  &none  &none  &none  &none  &none
-&kp M    &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0    &none  &none  &none  &none  &none  &none
-                                     &none         &trans        &none           &none  &none  &none
+&kp ESC         &kp P         &kp O         &kp I         &kp U         &kp Y           &none  &none  &none  &none  &none  &none
+&kp RET         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5          &none  &none  &none  &none  &none  &none
+&kp LEFT_SHIFT  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0    &none  &none  &none  &none  &none  &none
+                                            &none         &trans        &none           &none  &none  &none
             >;
         };
     };
